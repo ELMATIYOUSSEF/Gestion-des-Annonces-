@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1710946858741-2" author="YouCode (generated)">
+        <dropForeignKeyConstraint baseTableName="announces" constraintName="FK_ANNOUNCES_ON_LOCATION"/>
+    </changeSet>
+    <changeSet id="1710946858741-1" author="YouCode (generated)">
+        <addColumn tableName="announces">
+            <column name="location" type="BIGINT"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="1710946858741-3" author="YouCode (generated)">
+        <dropTable cascadeConstraints="true" tableName="locations"/>
+    </changeSet>
+    <changeSet id="1710946858741-4" author="YouCode (generated)">
+        <dropColumn columnName="location_id" tableName="announces"/>
+    </changeSet>
+
+</databaseChangeLog>

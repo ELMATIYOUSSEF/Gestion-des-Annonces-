@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1710952712785-1" author="YouCode (generated)">
+        <dropForeignKeyConstraint baseTableName="announces_images" constraintName="fk_annima_on_announce"/>
+    </changeSet>
+    <changeSet id="1710952712785-2" author="YouCode (generated)">
+        <dropForeignKeyConstraint baseTableName="announces_images" constraintName="fk_annima_on_image"/>
+    </changeSet>
+    <changeSet id="1710952712785-4" author="YouCode (generated)">
+        <dropTable cascadeConstraints="true" tableName="announces_images"/>
+    </changeSet>
+
+</databaseChangeLog>

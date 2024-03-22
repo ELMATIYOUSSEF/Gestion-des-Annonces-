@@ -1,0 +1,45 @@
+# Server Configuration
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
+
+
+# Spring Configuration
+spring:
+  #to enable colors when you run your app outside intellij
+  output:
+    ansi:
+      enabled: always
+
+  # Database Configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/filrouge?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    open-in-view: true
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false
+
+  liquibase:
+    enabled: true
+    change-log: db/master.xml
+  main:
+    lazy-initialization: true
+jwt:
+  token:
+    signing:
+      key: UG2YeG3GJrY3GJtGt3KJyyH4OP3JKyH3KG4UKHG3jhkhfBK3BUolk3KjJB3=
+    validity:
+      access:
+        in:
+          minutes: 1
+      refresh:
+        in:
+          month: 1
+file:
+  upload-dir: C:\upload
